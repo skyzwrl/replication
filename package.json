@@ -1,0 +1,50 @@
+{
+	"name": "@skyzwrl/replication",
+	"version": "0.1.0",
+	"description": "server driven transform replication with snapshot interpolation, interest management and a packed buffer format",
+	"main": "out/init.luau",
+	"types": "out/index.d.ts",
+	"files": [
+		"out",
+		"!out/__tests__",
+		"!**/*.tsbuildinfo"
+	],
+	"scripts": {
+		"build": "rbxtsc",
+		"watch": "rbxtsc -w",
+		"lint": "eslint",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"test": "npm run build && rojo build test.project.json -o test.rbxl && lune run test test.rbxl ReplicatedStorage.rbxts_include.node_modules.@skyzwrl.replication",
+		"prepare": "npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/skyzwrl/replication.git"
+	},
+	"keywords": [
+		"roblox",
+		"roblox-ts",
+		"replication",
+		"networking",
+		"interpolation"
+	],
+	"author": "skyzwrl",
+	"license": "MIT",
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@rbxts/compiler-types": "^3.0.0-types.0",
+		"@rbxts/testez": "^0.4.2-ts.0",
+		"@rbxts/types": "^1.0.958",
+		"eslint": "^10.13.0",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-roblox-ts": "^1.4.1",
+		"prettier": "^3.9.10",
+		"roblox-ts": "^3.0.0",
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.71.2"
+	},
+	"dependencies": {
+		"@rbxts/services": "^1.6.0"
+	}
+}

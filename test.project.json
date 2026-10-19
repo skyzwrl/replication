@@ -1,0 +1,25 @@
+{
+	"name": "replication-tests",
+	"globIgnorePaths": ["**/package.json", "**/tsconfig.json"],
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"rbxts_include": {
+				"$path": "node_modules/roblox-ts/include",
+				"node_modules": {
+					"$className": "Folder",
+					"@rbxts": {
+						"$path": "node_modules/@rbxts"
+					},
+					"@skyzwrl": {
+						"$className": "Folder",
+						"replication": {
+							"$path": "out"
+						}
+					}
+				}
+			}
+		}
+	}
+}
